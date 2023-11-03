@@ -358,6 +358,7 @@ button {
 }
 .show {
   display: flex;
+  
 }
 
 .dropdown-content > ul {
@@ -1016,9 +1017,22 @@ footer > div > p {
     width: 70vw;
   }
 
-  .main-menu-items {
-    flex-wrap: wrap;
+  .dropdown-content {
+    position: relative;
+    width: 75vw;
+    margin: 0 auto;
   }
+  .main-menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+.header-menu{
+  width: 75vw;
+  margin: 0 auto;
+}
+
 
   .main-menu-li {
     display: flex;
