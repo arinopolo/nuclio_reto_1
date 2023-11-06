@@ -30,7 +30,7 @@
   
     <div class="main-container">
     
-        <div>
+        <div >
           <ul class="pre-header">
             <li><a href="#">ES NOTICIA</a></li>
             <li><a href="#">Guerra Israel Gaza</a></li>
@@ -73,8 +73,15 @@
         </div>
     </div>
         <header>
+          <div id="scrolling">
+            <div class="scroll-container">
+            <i class="fa-solid fa-globe fa-lg globe"></i>
+            <h5 class="uppercase"> Portada</h5>
+          </div>
+          </div>
           <nav
-           class="header-menu">
+           class="header-menu" id="scroll">
+           
             <ul>
               <li class="dropdown">
                 España
@@ -1003,6 +1010,8 @@
                 </svg>
               </button>
             </div>
+
+          
           </nav>
         </header>
      
@@ -1921,5 +1930,25 @@
         </ul>
       </div>
     </footer>
+
+<script>
+
+window.addEventListener("scroll", function() {
+  let header = document.getElementById("scroll");
+  let content = document.getElementById("scrolling");
+  let rect = header.getBoundingClientRect();
+
+  if (rect.top <= 0 && window.scrollY > rect.bottom) {
+  
+   
+    header.style.display = "none"; // Muestra el elemento
+    content.style.display = "block";
+  } else {
+   
+    header.style.display = "block";
+    content.style.display = "none";  // Oculta el elemento
+  }
+});
+</script>
   </body>
 </html>
