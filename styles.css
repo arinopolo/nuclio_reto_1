@@ -928,6 +928,7 @@ footer > div > p {
 
 .scroll-container {
   display: flex;
+  gap: 0.3rem;
   align-items: center;
   width: 75vw;
   margin: 0 auto;

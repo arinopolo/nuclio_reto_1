@@ -15,4 +15,19 @@ window.onclick = function (event) {
   }
 };
 
+window.addEventListener("scroll", function() {
+  let header = document.getElementById("scroll");
+  let content = document.getElementById("scrolling");
+  let rect = header.getBoundingClientRect();
 
+  if (rect.top <= 0 && window.scrollY > rect.bottom) {
+  
+   
+    header.style.display = "none"; // Muestra el elemento
+    content.style.display = "block";
+  } else {
+   
+    header.style.display = "block";
+    content.style.display = "none";  // Oculta el elemento
+  }
+});
